@@ -70,6 +70,7 @@ position: absolute;
   border-radius: 25px;
   box-shadow: inset 2px 2px 5px #babecc,
               inset -5px -5px 10px #ffffff73;
+  margin: 5px;
 }
 
 .field input:focus ~ label{
