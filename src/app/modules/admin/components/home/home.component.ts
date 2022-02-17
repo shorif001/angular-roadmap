@@ -11,8 +11,14 @@ export class HomeComponent implements OnInit {
 
   }
 
+  message = "hello world"
+
   ngOnInit(): void {
 
+  }
+
+  receiveMessage($event:any){
+    this.message = $event
   }
 
 }

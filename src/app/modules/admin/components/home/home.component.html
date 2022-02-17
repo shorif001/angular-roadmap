@@ -1,2 +1,6 @@
-<p>home works!</p>
+
 <!-- https://www.youtube.com/watch?v=kKtrHrciIVs&ab_channel=WebTechTalk -->
+
+<app-lifecycle [message]="message" (messageEven)="receiveMessage($event)"></app-lifecycle>
+
+message: {{message}}
