@@ -1,6 +1,14 @@
-
+<p>home</p>
 <!-- https://www.youtube.com/watch?v=kKtrHrciIVs&ab_channel=WebTechTalk -->
 
-<app-lifecycle [message]="message" (messageEven)="receiveMessage($event)"></app-lifecycle>
+<!-- <app-lifecycle [message]="message" (messageEven)="receiveMessage($event)"></app-lifecycle> -->
 
-message: {{message}}
+<!-- message: {{message}} -->
+
+
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="text" [(ngModel)]="channelName">
+
+<!-- <app-lifecycle *ngIf="isChild" [channelName]="channelName"></app-lifecycle> -->

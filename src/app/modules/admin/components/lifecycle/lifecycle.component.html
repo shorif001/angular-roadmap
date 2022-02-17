@@ -2,9 +2,17 @@
 <!-- https://www.youtube.com/watch?v=I317BhehZKM&ab_channel=Fireship -->
 
 
-<div class="notification">
+<!-- <div class="notification">
     <h3>Child</h3>
     Say {{message}}
     <button (click)="sendMessage()">child to parent data</button>
     dfdfd
+</div> -->
+
+
+<h3>Child comp</h3>
+
+<input type="text" [(ngModel)]="channelName">
+<div>
+    <h4>{{channelName}}</h4>
 </div>
