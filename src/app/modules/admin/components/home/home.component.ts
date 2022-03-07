@@ -13,14 +13,15 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
 
   message = "hello world"
   counter = 0;
+  // interval: any;
 
   ngOnInit(): void {
     console.log("parent OnInit view");
 
-    setInterval(()=>{
-      this.counter = this.counter + 1;
-      console.log(this.counter);
-    }, 1000)
+    // this.interval = setInterval(()=>{
+    //   this.counter = this.counter + 1;
+    //   console.log(this.counter);
+    // }, 1000)
   }
 
   // receiveMessage($event:any){
@@ -38,6 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy, OnChanges {
 
 
   ngOnDestroy(): void {
+    // clearInterval(this.interval);
     console.log("parent OnDestroy view");
   }
 
