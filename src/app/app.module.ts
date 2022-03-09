@@ -8,7 +8,6 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UsersListComponent } from './modules/users/users-list/users-list.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
