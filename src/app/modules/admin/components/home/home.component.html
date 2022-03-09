@@ -12,7 +12,7 @@
 <input type="text" [(ngModel)]="channelName">
 
 
-<app-lifecycle *ngIf="isChild"></app-lifecycle>
+<app-lifecycle *ngIf="isChild" [thisIsParentData]="channelName"></app-lifecycle>
 
 
 

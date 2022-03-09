@@ -23,17 +23,17 @@ export class LifecycleComponent implements OnInit, OnDestroy, OnChanges {
   counter = 0;
   interval: any;
   
-  variableName="";
-  @Input()
+  // variableName="";
+ @Input() thisIsParentData=""
   
 
   ngOnInit(): void {
     console.log("child OnInit view");
 
-    this.interval = setInterval(()=>{
-      this.counter = this.counter + 1;
-      console.log(this.counter);
-    }, 1000);
+    // this.interval = setInterval(()=>{
+    //   this.counter = this.counter + 1;
+    //   console.log(this.counter);
+    // }, 1000);
   }
 
   ngOnDestroy(): void {
