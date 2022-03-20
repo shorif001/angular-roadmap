@@ -197,4 +197,17 @@ inputFieldData(data:any){
 
 
 
+title1 = "Multiple condition or else if";
+// color="red";
+color="green";
+
+
+//switch case
+
+color1 = 'green';
+
+
+
+
+
 }

@@ -163,6 +163,7 @@
 
 
 
+
 <!-- property binding -->
 <input type="text" value={{name1}} disabled={{disable}>
 <input type="text" [value]=name1 [disabled]=true>
@@ -234,3 +235,42 @@
 </form>
 
 <p>{{userData | json}}</p>
+
+
+
+
+
+
+
+
+
+
+
+<h2>{{title1}}</h2>
+
+<ng-template [ngIf]="color==='red'">
+  <h1 style="color: red;">Red Color</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='green'">
+  <h1 style="color: green;">Green Color</h1>
+</ng-template>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+<h1>Switch Case</h1>
+
+<div [ngSwitch]="color1">
+  <p *ngSwitchCase="'red'" style="color: red;">Red Color</p>
+  <p *ngSwitchCase="'green'" style="color: green;">green Color</p>
+  <p *ngSwitchCase="'blue'" style="color: blue;">blue Color</p>
+  <p *ngSwitchDefault>Unknown Color</p>
+</div>
