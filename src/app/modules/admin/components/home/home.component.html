@@ -228,15 +228,17 @@
 
 
 <form #basicForm1="ngForm" (submit)="inputFieldData(basicForm1.value)">
-  <input type="text" ngModel name="userName" placeholder="Enter your name"><br>
-  <input type="email" ngModel name="email" placeholder="Enter your email"><br>
-  <input type="password" ngModel name="password" placeholder="Enter your password"><br>
+  <input type="text" ngModel name="userName" #uname placeholder="Enter your name"><br>
+  <input type="email" ngModel name="email" #email placeholder="Enter your email"><br>
+  <input type="password" ngModel name="password" #password placeholder="Enter your password"><br>
   <button>click me</button>
 </form>
 
 <p>{{userData | json}}</p>
 
-
+<tr *ngFor="let user of userData">
+  <td>{{user}}</td>
+  </tr>
 
 
 
@@ -307,7 +309,8 @@
 
 
 
-
+<!-- https://www.youtube.com/watch?v=cObHVHKdFY0&ab_channel=DCODESHOW -->
+<!-- https://www.youtube.com/watch?v=dMf7LPnFBEA&ab_channel=UXTrendz -->
 
 
 

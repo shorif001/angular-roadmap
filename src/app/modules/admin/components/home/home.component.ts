@@ -182,13 +182,16 @@ getName11(data:any){
 
 
 
-userData = [];
+userData = [{}];
 
 inputFieldData(data:any){
   console.log(data);
-  this.userData = data;
+  this.userData.push({
+    uname:data.value,
+    email:data.value,
+    password:data.value
+  })
 }
-
 
 
 
@@ -227,15 +230,6 @@ removeTask(id:number){
   console.log(id);
   this.list=this.list.filter((item: { id: number; })=>item.id!==id);
 }
-
-
-
-
-
-
-
-
-
 
 
 
