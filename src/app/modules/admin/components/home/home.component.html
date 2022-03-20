@@ -52,3 +52,185 @@
     </div>
   </div>
   
+
+  
+
+  <!-- interpolation -->
+
+  <h1>Interpolation</h1>
+<br /><br />
+
+<h5>{{ appName }}</h5>
+<h5>{{ name }}</h5>
+<h5>{{ getName() }}</h5>
+<h5>{{ obj }}</h5>
+<h5>
+  {{ obj.name }} <br />
+  this is object age {{ obj.age }}
+</h5>
+<h5>{{ arr }}</h5>
+<h5>array length is : {{ arr.length }}</h5>
+<h5>
+  {{ arr[0] }} <br />
+  {{ arr[1] }} <br />{{ arr[2] }}
+</h5>
+<h5>{{ siteUrl }}</h5>
+<h5>this is addition number : {{ 10 + 10 }}</h5>
+<h5>this is subtraction number : {{ 10 - 10 }}</h5>
+<h5>this is Multiplication number : {{ 10 * 10 }}</h5>
+<h5>this is division number : {{ 10 / 10 }}</h5>
+
+<!-- interpolation end -->
+
+
+
+
+<br /><br /><br /><br />
+<h1>component</h1>
+<h2>What is component</h2>
+<h5>
+  every component have 4 file <br/> component are the building blocks of our application that are used to developed any specific feature or functionality.
+</h5>
+
+
+
+<h1>Module</h1>
+<h2>What is module</h2>
+<h5>Module is a complete feature of your application. as like: user authenticatoin is a complete featar</h5>
+
+
+
+
+
+
+<h1>function on button click</h1>
+<!-- <button (click)="getName1()">click me</button> -->
+<button (click)="getName1('this is paramiter text in html')">click me</button>
+
+
+
+<h1>events, blue, keyup, mouseover etc</h1>
+<button (click)="getVal()">click me</button>
+<br>
+<br>
+
+<input type="text" placeholder="keyup box" #box1 (keyup)="getData(box1.value)" />
+<input type="text" placeholder="keydown box" #box2 (keydown)="getData(box2.value)" />
+<input type="text" placeholder="blur box" #box3 (blur)="getData(box3.value)" />
+<input type="text" placeholder="input box" #box4 (input)="getData(box4.value)" />
+
+<h1 (mouseover)="getData('mouse over')">Mouseover event</h1>
+<br>
+<h1 (mouseleave)="getData('mouse Leave')">MouseLeave event</h1>
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+<h1>get input field value</h1>
+<h5>{{title}}</h5>
+<input type="text" #box5 (keyup)="getValue(box5.value)" placeholder="username" name="username" id="username">
+<p>Box value is : {{displayVal}}</p>
+<br><br>
+
+
+<input type="text" #box6 placeholder="username" name="username" id="username">
+<p>Box value is : {{displayVal1}}</p>
+
+<!-- button click -->
+<button (click)="getValue1(box6.value)">Click me</button>
+
+<br><br><br>
+<!-- counter example -->
+<br><br>
+<button (click)="counter('minus')">-</button>
+<p>count : {{count}}</p>
+<button (click)="counter('plus')">+</button>
+<br><br>
+
+
+
+
+
+
+
+
+<!-- property binding -->
+<input type="text" value={{name1}} disabled={{disable}>
+<input type="text" [value]=name1 [disabled]=true>
+
+
+
+<br><br>
+<!-- if else -->
+<h1>if else</h1>
+
+<!-- <h1 *ngIf="show">code</h1> -->
+
+<h1 *ngIf="show; then ifBlock else elseBlock"></h1>
+
+<ng-template #ifBlock>
+  <p>If Condition</p>
+</ng-template>
+
+<ng-template #elseBlock>
+
+  <p>Else Condition</p>
+  
+</ng-template>
+
+<br>
+<br>
+
+<h1>ngFor</h1>
+
+<!-- <p *ngFor="let item of users">{{item}}</p> -->
+<!-- <p *ngFor="let item of users"> {{name}} == {{item.email}} == {{item.phone}}</p> -->
+
+
+<h1>nested Loop</h1>
+<ul *ngFor="let user of nestedLoop">
+  <li>{{user.name}}=={{user.phone}}=={{user.email}}</li>
+  <li>{{user.name}}</li>
+  <li>{{user.phone}}</li>
+  <li>{{user.email}}</li>
+
+  <ul *ngFor="let account of user.accounts">
+    <li>{{account}}</li>
+  </ul>
+
+</ul>
+
+
+
+
+
+
+
+
+<br><br>
+
+<h1 >{{getname11}}</h1>
+<button (click)="getName11('Shorif')">Click Me</button>
+
+
+
+<br><br>
+
+
+<form #basicForm1="ngForm" (submit)="inputFieldData(basicForm1.value)">
+  <input type="text" ngModel name="userName" placeholder="Enter your name"><br>
+  <input type="email" ngModel name="email" placeholder="Enter your email"><br>
+  <input type="password" ngModel name="password" placeholder="Enter your password"><br>
+  <button>click me</button>
+</form>
+
+<p>{{userData | json}}</p>
