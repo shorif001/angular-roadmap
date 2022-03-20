@@ -274,3 +274,26 @@
   <p *ngSwitchCase="'blue'" style="color: blue;">blue Color</p>
   <p *ngSwitchDefault>Unknown Color</p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- todo list -->
+
+<br>
+<br>
+<input type="text" placeholder="enter new task" #task />
+<br><br>
+<button (click)="addTask(task.value)">Add New Task</button>
+
+<h5 *ngFor="let item of list">
+  <li>{{item.name}} <button (click)="removeTask(item.id)">remove</button></li>
+</h5>
+<!--  254e55672b2700e80a27504d7def434396361db8 -->
