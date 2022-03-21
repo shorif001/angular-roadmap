@@ -314,3 +314,63 @@
 
 
 
+
+<div class="container">
+  <form>
+    <input type="text" name="userName" placeholder="Enter your name"><br>
+    <button>click me</button>
+  </form>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="addUser(myForm.value)">
+    <div class="form-group">
+      <label>Enter Your Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="userObj.name" >
+      <small>Name field required</small>
+    </div>
+    <div class="form-group">
+      <label>Enter Your Email</label>
+      <input type="text" class="form-control" name="Email" [(ngModel)]="userObj.email">
+      <small>Email field required</small>
+    </div>
+    <div class="form-group">
+      <label>Enter Your Phone</label>
+      <input type="number" class="form-control" name="Phone" [(ngModel)]="userObj.phone">
+      <small>Phone field required</small>
+    </div>
+    <div class="form-group">
+      <label>Enter Your Address</label>
+      <input type="text" class="form-control" name="Address" [(ngModel)]="userObj.address">
+      <small>Address field required</small>
+    </div>
+    <button type="submit" class="btn btn-primary" >Add</button>
+  </form>
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">phone</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let userItem of userList3">
+      <th scope="row">1</th>
+      <td>{{userItem.name}}</td>
+      <td>{{userItem.email}}</td>
+      <td>{{userItem.phone}}</td>
+      <td>{{userItem.address}}</td>
+    </tr>
+  </tbody>
+</table>

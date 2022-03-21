@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { NgControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -230,6 +231,26 @@ removeTask(id:number){
   console.log(id);
   this.list=this.list.filter((item: { id: number; })=>item.id!==id);
 }
+
+
+
+
+
+public userList3: any = [];
+
+public userObj: any = {
+  name: '',
+  email: '',
+  phone:'',
+  address:''
+ }
+
+
+
+ addUser(userForm:any){
+    this.userList3.push(this.userObj); 
+  }
+
 
 
 
