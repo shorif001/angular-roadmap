@@ -32,24 +32,10 @@
   </div>
   <div class="wrapper">
     <h2>Button Colors</h2>
-    <div class="clr"></div>
-    <div class="row">
+    
     <a href="admin/home" class="btn btn-primary">Read More</a>
-    <a href="admin/home" class="btn btn-info">Read More</a>
-    <a href="admin/home" class="btn btn-success">Read More</a>
-    <a href="admin/home" class="btn btn-warning">Read More</a>
-    <a href="admin/home" class="btn btn-danger">Read More</a>
-    <a href="admin/home" class="btn btn-inverse">Read More</a>
-    </div>
-    <div class="clr"></div>
-    <h2>Button Sizes</h2>
-    <div class="clr"></div>
-    <div class="row">
-    <a href="admin/home" class="btn btn-large">Read More</a>
-    <a href="admin/home" class="btn">Read More</a>
-    <a href="admin/home" class="btn btn-small">Read More</a>
     <a href="admin/home" class="btn btn-mini">Read More</a>
-    </div>
+   
   </div>
   
 
@@ -341,7 +327,7 @@
     </div>
     <div class="form-group">
       <label>Enter Your Phone</label>
-      <input type="number" class="form-control" name="Phone" [(ngModel)]="userObj.phone">
+      <input type="text" class="form-control" name="Phone" [(ngModel)]="userObj.phone">
       <small>Phone field required</small>
     </div>
     <div class="form-group">
@@ -365,8 +351,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let userItem of userList3">
-      <th scope="row">1</th>
+    <tr *ngFor="let userItem of userList3; index as i">
+      <th scope="row">{{i+1}}</th>
       <td>{{userItem.name}}</td>
       <td>{{userItem.email}}</td>
       <td>{{userItem.phone}}</td>

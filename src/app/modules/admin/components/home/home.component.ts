@@ -236,9 +236,9 @@ removeTask(id:number){
 
 
 
-public userList3: any = [];
+userList3: any = [];
 
-public userObj: any = {
+userObj: any = {
   name: '',
   email: '',
   phone:'',
@@ -248,7 +248,12 @@ public userObj: any = {
 
 
  addUser(userForm:any){
-    this.userList3.push(this.userObj); 
+     this.userList3.push(this.userObj); 
+     this.userObj = {
+      name: '',
+      phone: '',
+      email: '',
+    };
   }
 
 
