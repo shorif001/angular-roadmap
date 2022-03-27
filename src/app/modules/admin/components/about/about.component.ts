@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -24,10 +25,21 @@ export class AboutComponent implements OnInit {
     this.userData.push(this.userProperty);
     this.userProperty = {
       name: '',
-      phone: '',
+      phone: '',  
       email: '',
     };
     console.log(u);
   }
+
+  updateText = 'Add';
+
+  editUser(user:any){
+    console.log(user);
+    this.updateText = "Update"
+    this.userProperty = user
+  }
+
+  
+
 
 }
