@@ -5,3 +5,19 @@
 {{name}} <br>
 {{fullName}} <br>
 {{lastName}}
+
+<table>
+    <thead>
+        <th>{{name}}</th> &nbsp;
+        <th>{{fullName}}</th> &nbsp;
+        <th>{{lastName}}</th>
+        <th>{{array.name}}</th>
+        <th>{{currentDate}}</th>
+    </thead>
+</table>
+
+<input type="text" [minLength]="minLength" name="name" id="name">
+<br>
+<button (click)="increment()">+</button>
+<p>{{roleNo}}</p>
+<button (click)="decrement()">-</button>

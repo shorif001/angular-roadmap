@@ -11,11 +11,34 @@ export class BasicFormComponent implements OnInit, OnChanges, DoCheck, AfterCont
 
   name:string; //jodi ei rokom kore variable lekha hoy tahole constructor er vitore variable er valu likhte hobe.
 
-  fullName: string = "shorif";
-  lastName = "Shorif"
+  fullName: string = "shorif,";
+  lastName = "Shorif,"
+
+  array = {
+    name: "Array Name,",
+    class: "Five"
+  }
+
+  object = [343, "shorif", "rohim", "korim"]
+
+  currentDate: Date;
+
+  minLength = 10;
+
+  roleNo = 1;
+
+  increment(){
+    this.roleNo++;
+  }
+  decrement(){
+    this.roleNo --;
+  }
+
+
 
   constructor() { 
     this.name = "Shorif";
+    this.currentDate = new Date();
   }
 
   ngOnInit(): void {
