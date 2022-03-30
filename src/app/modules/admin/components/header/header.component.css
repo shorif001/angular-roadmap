@@ -120,7 +120,7 @@ text-decoration: none;
 
 .btn{
     height: 35px;
-    width: 85px;
+    /* width: 85px; */
     border-radius: 3px;
     background: #e0e5ec;
     display: flex;

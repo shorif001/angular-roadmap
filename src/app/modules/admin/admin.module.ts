@@ -9,6 +9,8 @@ import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
+import { BasicFormComponent } from './components/basic-form/basic-form.component';
+import { BasicParentComponent } from './components/basic-parent/basic-parent.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AboutComponent } from './components/about/about.component';
     AdminDashboardComponent,
     LifecycleComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    BasicFormComponent,
+    BasicParentComponent
   ],
   imports: [
     CommonModule,
